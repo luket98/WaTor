@@ -233,6 +233,7 @@ class WaTor {
 		// repeat the code to prompt asking the user if they want to save
 		// the population chart.
 		// TODO Milestone 3
+		
 
 		// Always prompt the user to see if they would like to save a
 		// population chart of the simulation.
@@ -243,6 +244,12 @@ class WaTor {
 		// repeat the code to prompt asking the user if they want to save
 		// the population chart.
 		// TODO Milestone 3
+		System.out.println("Would you like to save a population chart of the simulation?");
+		String yesOrNo = input.next();
+		if (yesOrNo.trim().equalsIgnoreCase("y")) {
+			
+		}
+		
 
 		input.close();
 	}
@@ -1082,7 +1089,7 @@ class WaTor {
 	 *            The array containing all the ages of all the sharks.
 	 * @param fishMove
 	 *            The array containing the indicator of whether each fish moved this
-	 *            chronon.
+ii	 *            chronon.
 	 * @param sharksMove
 	 *            The array containing the indicator of whether each shark moved
 	 *            this chronon.
