@@ -1288,15 +1288,10 @@ class WaTor {
 	 */
 	public static void savePopulationChart(int[] simulationParameters, ArrayList<int[]> history, int oceanWidth,
 			int oceanHeight, String filename) throws IOException {
+		// test comment
 		File file = new File(filename);
 		for (int i = 0; i < simulationParameters.length; i++) {
 			
-			if (simulationParameters == null)
-				;
-			if (history == null)
-				;
-			System.out.println("error");
-			break;
 		}
 		
 		
