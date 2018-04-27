@@ -1294,40 +1294,40 @@ class WaTor {
 			return;
 		}
 		try {
-		File file = new File(filename);
-		PrintWriter printWriter = new PrintWriter(file);
-		for (int i = 0; i < simulationParameters.length; i++) {
-			printWriter.println(simulationParameters[i]);
-		}
-		printWriter.println();
-		for (int i = 0; i < history.length; i++) {
-			int chronon = history[i][0]; // get chronon
-			int fish = history[i][1]; // get number of fish
-			int sharks = history[i][2]; // get number of sharks
-			printWriter.printf("F%3d", fish); // print "F #"
-			printWriter.print(" "); // print space
-			printWrtier.printf("F%3d", sharks); // print "S #"
-			printWriter.print(" "); // print space
-			printWriter.print(chronon + (")"); // print "chronon)"
-			if (fish < sharks) {  // print fish first
-				for (int i =0; i < fish; i++) 
-					printWRtier.print("."); // print .'s for fish
-			for (int i = 0; i < sharks; i++) 
-				printWriter.print("O"); // print O's for sharks
-
-			printWriter.println();
-			} else { // print sharks first
-				for (int i = 0; i < sharks; i++) 
-					printWriter.print("O"); // print O's for sharks
-				for (int i =0; i < fish; i++) 
-					printWRtier.print("."); // print .'s for fish
+			File file = new File(filename);
+			PrintWriter printWriter = new PrintWriter(file);
+			for (int i = 0; i < simulationParameters.length; i++) {
+				printWriter.println(simulationParameters[i]);
 			}
-		}
+			printWriter.println();
+			for (int i = 0; i < history.length; i++) {
+				int chronon = history[i][0]; // get chronon
+				int fish = history[i][1]; // get number of fish
+				int sharks = history[i][2]; // get number of sharks
+				printWriter.printf("F%3d", fish); // print "F #"
+				printWriter.print(","); // print comma
+				printWrtier.printf("F%3d", sharks); // print "S #"
+				printWriter.print(" "); // print space
+				printWriter.print(chronon + (")"); // print "chronon)"
+				if (fish < sharks) {  // print fish first
+					for (int i =0; i < fish; i++) 
+						printWriter.print("."); // print .'s for fish
+					for (int i = 0; i < sharks; i++) 
+						printWriter.print("O"); // print O's for sharks
+
+					printWriter.println();
+				} else { // print sharks first
+					for (int i = 0; i < sharks; i++) 
+						printWriter.print("O"); // print O's for sharks
+					for (int i =0; i < fish; i++) 
+						printWriter.print("."); // print .'s for fish
+				}
+			}
 		} catch (IOException e) {
 			System.out.println("File cannot be written.")
 		}
-		
-		
+
+
 
 		// printWriter.print(Config.SIM_PARAMS[i] + "=" + simulationParameters[i] + "
 		// ");
